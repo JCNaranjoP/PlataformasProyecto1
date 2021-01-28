@@ -36,3 +36,19 @@ main{
     backdrop-filter: blur(5xp);
     background-color: rgba(189, 184, 184,0.6);
 }
+
+.box_back div{
+    margin: 100px 40px;
+    color: white;
+    transition: all 500ms;
+}
+
+.box_back div p,
+.box_back div button{
+    margin-top:30px;
+}
+
+.box_back div h3{
+    font-weight: 400;
+    font-size: 26px;
+}
