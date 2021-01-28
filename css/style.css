@@ -78,7 +78,7 @@ main{
     width: 100%;
     max-width: 380px;
     position: relative;
-    top: 185px;
+    top: -185px;
     left: 10px;
 }
 
@@ -125,4 +125,19 @@ main{
 
 .form_sing-up{
     display: none;
+}
+
+/*Responsive desing*/
+
+@media screen and (max-width: 850px){
+    main{
+        margin-top:50px;
+    }
+    .box_back{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+
+    }
 }
