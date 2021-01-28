@@ -145,6 +145,18 @@ main{
         margin: 0px;
         position: absolute;
     }
+    
+    /*Forms */
+
+    .container_login-sing-up{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .container_login-sing-up form{
+        position: relative;
+    }
 
     
 }
