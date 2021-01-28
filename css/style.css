@@ -133,11 +133,18 @@ main{
     main{
         margin-top:50px;
     }
+
     .box_back{
         max-width: 350px;
         height: 300px;
         flex-direction: column;
         margin: auto;
-
     }
+
+    .box_back div{
+        margin: 0px;
+        position: absolute;
+    }
+
+    
 }
