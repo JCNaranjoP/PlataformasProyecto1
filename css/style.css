@@ -39,7 +39,7 @@ main{
 
 .box_back div{
     margin: 100px 40px;
-    color: white;
+    color: #fff;
     transition: all 500ms;
 }
 
@@ -55,17 +55,37 @@ main{
 
 .box_back button{
     padding: 10px 40px;
-    border: 2px solid white;
+    border: 2px solid #fff;
     background: transparent;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
-    color: white;
+    color: #fff;
     outline: none;
     transition: all 300ms;
 }
 
 .box_back button:hover{
-    background-color: white;
+    background-color: #fff;
     color: gray;
+}
+
+/*Forms styles*/
+
+.container_login-sing-up{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 380px;
+    position: relative;
+    top: -185px;
+    left: 10px;
+}
+
+.container_login-sing-up form{
+    width: 100%;
+    padding: 80px 20px;
+    background: #fff;
+    position: absolute;
+    border-radius: 20px;
 }
