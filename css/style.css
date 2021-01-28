@@ -7,9 +7,16 @@
 }
 
 body{
-    background-image: url(../img/backgraund_index.jpg);
+    background-image: url(../img/background_index.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
+}
+
+main{
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
 }
