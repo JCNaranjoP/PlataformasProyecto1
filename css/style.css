@@ -20,3 +20,11 @@ main{
     margin: auto;
     margin-top: 100px;
 }
+
+.container_login-sing-up{
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
