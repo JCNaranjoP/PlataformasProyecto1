@@ -28,3 +28,11 @@ main{
     position: relative;
 }
 
+.box_back{
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    backdrop-filter: blur(5xp);
+    background-color: rgba(189, 184, 184,0.6);
+}
