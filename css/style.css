@@ -3,8 +3,9 @@
     padding:0;
     box-sizing: border-box;
     text-decoration: none;
-    font-family: sans-serif;
+    font-family:'Roboto', sans-serif;
 }
+
 
 body{
     background-image: url(../img/background_index.jpg);
@@ -78,8 +79,9 @@ main{
     width: 100%;
     max-width: 380px;
     position: relative;
-    top: -185px;
+    top:-185px;
     left: 10px;
+    transition: left 500ms cubic-bezier(0.175,0.885, 0.320,1.275);
 }
 
 .container_login-sing-up form{
