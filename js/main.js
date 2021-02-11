@@ -30,13 +30,14 @@ document.getElementById("form_c-password").addEventListener("submit",function(ev
 //sing up
 document.getElementById("form_sing-up").addEventListener("submit",function(event){
     event.preventDefault();
-    let user = array({
-        mail = mail_su.value,
+    let users = Array({
+        mail: mail_su.value,
         user: user_su.value,
-        pass = pass_su.value,
-        cpass = cpass_su.value
+        pass: pass_su.value,
+        cpass: cpass_su.value
     });
-    localStorage.setItem("user",JSON.stringify(user));
+    console.log(users);
+    localStorage.setItem('user',JSON.stringify(users));
     login();
 });
 
