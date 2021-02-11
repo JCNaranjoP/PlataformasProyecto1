@@ -1,3 +1,4 @@
+window.addEventListener("load",clear);
 
 document.getElementById("btn_sing-up").addEventListener("click", register);
 document.getElementById("btn_login").addEventListener("click", login);
@@ -17,30 +18,95 @@ const user_su = document.getElementById("user_su");
 const pass_su = document.getElementById("pass_su");
 const cpass_su = document.getElementById("cpass_su");
 
+const user_fp = document.getElementById("user_fp");
+const mail_fp = document.getElementById("mail_fp");
 
+const pass_cp = document.getElementById("pass_cp");
+const cpass_cp = document.getElementById("cpass_cp");
+
+const user = document.getElementById("user");
+const pass = document.getElementById("pass");
+
+//login
+document.getElementById("form_login").addEventListener("submit",function(event){
+    event.preventDefault();
+    if(localStorage.getItem(user.value)!=null){
+        let userr= JSON.parse(localStorage.getItem(user.value));
+        if(userr[0].pass==pass.value){
+            location.href = "pag.html";
+        }else{
+            alert("Contraseña incorrecta");
+            pass.value="";
+        }
+        
+    }else{
+        alert("Usuario no existe");
+        user.value = "";
+        pass.value = "";
+    }
+    
+});
+
+
+//forgot password
 document.getElementById("form_f-password").addEventListener("submit",function(event){
     event.preventDefault();
-    change_password();
+    if(localStorage.getItem(user_fp.value)!=null){
+        let user= JSON.parse(localStorage.getItem(user_fp.value));
+        if(user[0].mail==mail_fp.value){
+            change_password();
+        }else{
+            alert("El correo no coincide");
+            mail_fp.value="";
+        }
+        
+    }else{
+        alert("Usuario no existe");
+        user_fp.value = "";
+        mail_fp.value = "";
+    }
+    
 });
 
+//change password
 document.getElementById("form_c-password").addEventListener("submit",function(event){
     event.preventDefault();
-    change();
+    if(pass_cp.value==cpass_cp.value)
+    {
+        let user = Array({
+            mail: mail_fp.value,
+            pass: pass_cp.value,
+        });
+        localStorage.setItem(user_fp.value,JSON.stringify(user));
+        login();
+        alert("Contraseña restablecida");
+    }else{
+        alert("Las contraseñas no coinciden");
+    }
 });
+
+
 //sing up
 document.getElementById("form_sing-up").addEventListener("submit",function(event){
     event.preventDefault();
-    let users = Array({
-        mail: mail_su.value,
-        user: user_su.value,
-        pass: pass_su.value,
-        cpass: cpass_su.value
-    });
-    console.log(users);
-    localStorage.setItem('user',JSON.stringify(users));
-    login();
+    if(pass_su.value==cpass_su.value)
+    {
+        let users = Array({
+            mail: mail_su.value,
+            pass: pass_su.value,
+        });
+        localStorage.setItem(user_su.value,JSON.stringify(users));
+        alert("Registro exitoso");
+        login();
+    }else{
+        alert("Las contraseñas no coinciden");
+        cpass_su.value = "";
+    }
 });
 
+
+
+//Funciones cambio de forms
 function change(){
     alert("Contraseña restablecida");
     login();
@@ -84,6 +150,7 @@ function forgot_password(){
 }
 
 function register(){
+    clear();
     if(window.innerWidth > 850){
 
         form_sing_up.style.display = "block";
@@ -124,6 +191,7 @@ function widthPage(){
 
 
 function login(){
+    clear();
     if(window.innerWidth > 850){
         form_sing_up.style.display = "none";
         container_login_sing_up.style.left = "10px";
@@ -141,4 +209,18 @@ function login(){
     form_f_password.style.display = "none";
     form_c_password.style.display = "none";
     }
+}
+
+//Limpiar datos
+function clear() {
+    user_su.value="";
+        mail_su.value="";
+        pass_su.value = "";
+        cpass_su.value = "";
+        user_fp.value="";
+        mail_fp.value="";
+        pass_cp.value = "";
+        cpass_cp.value = "";
+        user.value = "";
+        pass.value = "";
 }
