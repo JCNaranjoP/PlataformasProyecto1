@@ -129,6 +129,13 @@ main{
     display: none;
 }
 
+.form_f-password{
+    display: none;
+}
+
+.form_c-password{
+    display: none;
+}
 /*Responsive desing*/
 
 @media screen and (max-width: 850px){
