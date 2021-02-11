@@ -28,33 +28,33 @@
                     <!--form login-->
                     <form action="" class="form_login">
                         <h2>Iniciar Sesión</h2>
-                        <input type="text" id="user" placeholder="Correo Electronico">
-                        <input type="password" id="pass" placeholder="Contraseña">
+                        <input type="text" id="user" placeholder="Usuario" required>
+                        <input type="password" id="pass" placeholder="Contraseña" required>
                         <button>Entrar</button>
                         <p id="forgot-password">¿olvidaste tu contraseña?</p>
                     </form>
                     <!--form sing up-->
-                    <form action="" class="form_sing-up">
+                    <form action="" class="form_sing-up" id="form_sing-up">
                         <h2>Registrarse</h2>
-                        <input type="text" id="mail_su" placeholder="Correo Electronico">
-                        <input type="text" id="user_su" placeholder="Usuario">
-                        <input type="password" id="pass_su" placeholder="Contraseña">
-                        <input type="password" id="cpass_su" placeholder="Confirmar Contraseña">
+                        <input type="text" id="mail_su" placeholder="Correo Electronico" required>
+                        <input type="text" id="user_su" placeholder="Usuario" required>
+                        <input type="password" id="pass_su" placeholder="Contraseña" required>
+                        <input type="password" id="cpass_su" placeholder="Confirmar Contraseña" required>
                         <button>Registrarse</button>
                     </form>
                     <!--form forgot password-->
-                    <form action="" class="form_f-password">
+                    <form action="" class="form_f-password" id="form_f-password">
                         <h2>Olvidaste tu contraseña</h2>
-                        <input type="text" id="user_fp" placeholder="Usuario">
-                        <input type="text" id="mail_fp" placeholder="Correo Electronico">
-                        <button id="btn_f-password" type="button">Siguiente</button>
+                        <input type="text" id="user_fp" placeholder="Usuario" required>
+                        <input type="text" id="mail_fp" placeholder="Correo Electronico" required>
+                        <button>Siguiente</button>
                     </form>
                     <!--form change password-->
-                    <form action="" class="form_c-password">
+                    <form action="" class="form_c-password" id="form_c-password">
                         <h2>Olvidaste tu contraseña</h2>
-                        <input type="password" id="pass_cp" placeholder="Nueva Contraseña">
-                        <input type="password" id="cpas_cp" placeholder="Confirmar Contraseña">
-                        <button id="btn_c-password" type="button">Restablecer</button>
+                        <input type="password" id="pass_cp" placeholder="Nueva Contraseña" required>
+                        <input type="password" id="cpas_cp" placeholder="Confirmar Contraseña" required>
+                        <button>Restablecer</button>
                     </form>
                 </div>
         </div>

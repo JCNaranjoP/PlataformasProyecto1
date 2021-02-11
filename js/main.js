@@ -3,8 +3,6 @@ document.getElementById("btn_sing-up").addEventListener("click", register);
 document.getElementById("btn_login").addEventListener("click", login);
 window.addEventListener("resize",widthPage);
 document.getElementById("forgot-password").addEventListener("click",forgot_password);
-document.getElementById("btn_f-password").addEventListener("click", change_password);
-document.getElementById("btn_c-password").addEventListener("click",change);
 
 /*Var declaration*/
 var form_login = document.querySelector(".form_login");
@@ -14,7 +12,33 @@ var form_c_password = document.querySelector(".form_c-password");
 var container_login_sing_up = document.querySelector(".container_login-sing-up")
 var box_login = document.querySelector(".box_login");
 var box_sing_up = document.querySelector(".box_sing-up");
+const mail_su = document.getElementById("mail_su");
+const user_su = document.getElementById("user_su");
+const pass_su = document.getElementById("pass_su");
+const cpass_su = document.getElementById("cpass_su");
 
+
+document.getElementById("form_f-password").addEventListener("submit",function(event){
+    event.preventDefault();
+    change_password();
+});
+
+document.getElementById("form_c-password").addEventListener("submit",function(event){
+    event.preventDefault();
+    change();
+});
+//sing up
+document.getElementById("form_sing-up").addEventListener("submit",function(event){
+    event.preventDefault();
+    let user = array({
+        mail = mail_su.value,
+        user: user_su.value,
+        pass = pass_su.value,
+        cpass = cpass_su.value
+    });
+    localStorage.setItem("user",JSON.stringify(user));
+    login();
+});
 
 function change(){
     alert("Contraseña restablecida");
