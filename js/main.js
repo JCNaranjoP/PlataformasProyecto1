@@ -1,5 +1,5 @@
+window.addEventListener("load",widthPage);
 window.addEventListener("load",clear);
-
 document.getElementById("btn_sing-up").addEventListener("click", register);
 document.getElementById("btn_login").addEventListener("click", login);
 window.addEventListener("resize",widthPage);
