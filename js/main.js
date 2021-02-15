@@ -33,7 +33,7 @@ document.getElementById("form_login").addEventListener("submit",function(event){
     if(localStorage.getItem(user.value)!=null){
         let userr= JSON.parse(localStorage.getItem(user.value));
         if(userr[0].pass==pass.value){
-            location.href = "pag.html";
+            location.href = "galeria.html";
         }else{
             alert("Contraseña incorrecta");
             pass.value="";
